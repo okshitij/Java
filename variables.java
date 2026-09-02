@@ -1,6 +1,6 @@
 //java is static typed lang meaning we have to declare the type of variable before using it unlike js
 
-public class variables{
+public class Variables{
 
     int member_variable; //instance variable -> belongs to the object of the class
     static int static_variable; //static variable -> belongs to the class itself
