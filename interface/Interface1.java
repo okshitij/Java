@@ -5,6 +5,13 @@ public interface Bird{
     public interface Nested{
         public void buildNest();
     }
+
+    // Default method -> you don't have to implement it in the implementing class (java 8 feature)
+    // cuz what if its implemented in lots of classes and you want to change the implementation of that method, 
+    // you can just change it in the interface and all the implementing classes will get the new implementation
+    default void chirp(){
+        System.out.println("Chirp chirp");
+    }
 }
 
 public class Interface1 implements Bird{
