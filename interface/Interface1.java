@@ -11,6 +11,26 @@ public interface Bird{
     // you can just change it in the interface and all the implementing classes will get the new implementation
     default void chirp(){
         System.out.println("Chirp chirp");
+
+        sleep(); // calling static method
+        privateMethod(); // calling private method
+        privateStaticMethod(); // calling private static method
+    }
+
+    //same as default method but can't be overridden in the implementing class
+    static void sleep(){
+        System.out.println("Bird is sleeping");
+
+        privateStaticMethod(); // calling private static method
+    }
+
+    //java 9 feature
+    private void privateMethod(){
+        System.out.println("This is a private method in the interface");
+    }
+
+    private static void privateStaticMethod(){
+        System.out.println("This is a private static method in the interface");
     }
 }
 
