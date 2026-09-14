@@ -1,3 +1,6 @@
+// PQ is based on heap
+// it is not thread-safe, to make it safe use : PriorityBlockingQueue
+
 public class Collection3{
     //natural ordering -> ascending -> min pq
     PriorityQueue<Integer> minPQ = new PriorityQueue<>();
