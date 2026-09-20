@@ -30,6 +30,12 @@ public class Collection8{
         //from stream iterate
         Stream<Integer> stream5 = Stream.iterate(1000, (Integer n ) -> n + 5000).limit(5); // 1000 6000 11000 16000 21000
 
+
+        //different intermediate operations
+        //filter(Predicate<T> predicate)
+        Stream<String> nameStream = Stream.of("Hello", "everyone", "how", "are", "you", "doing");
+        Stream<String> filteredStream = nameStream.filter((String name) -> name.length() <= 3);
+        filteredStream.forEach((String name) -> System.out.println(name)); //how are you
         
 
     }
